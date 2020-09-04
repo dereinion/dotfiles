@@ -77,3 +77,6 @@ $ ssh -T git@github.com
 If it says something like the following, it worked:
 
 Hi username! You've successfully authenticated, but Github does not provide shell access.
+
+## Sync time dualboot Windows ##
+$ timedatectl set-local-rtc 1 --adjust-system-clock
