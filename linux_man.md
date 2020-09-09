@@ -78,5 +78,14 @@ If it says something like the following, it worked:
 
 Hi username! You've successfully authenticated, but Github does not provide shell access.
 
-## Sync time dualboot Windows ##
+## Sync time dualboot Windows 
 $ timedatectl set-local-rtc 1 --adjust-system-clock
+
+# Noise cancellation
+Edit /etc/pulse/default.pa and add the following text at the bottom (Just what's between the ---- lines)
+--------------------------------------------------------------
+load-module module-echo-cancel source_name=noechosource sink_name=noechosink
+set-default-source noechosource
+set-default-sink noechosink
+------------------------------------------------------------
+Then run : pulseaudio -k
