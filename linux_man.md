@@ -90,3 +90,6 @@ $ set-default-sink noechosink
 
 Then run: 
 $ pulseaudio -k
+
+## For sound fix
+$ sudo apt-get install pavucontrol
