@@ -93,4 +93,9 @@ $ pulseaudio -k
 
 ## For sound fix
 $ sudo apt-get install pavucontrol
+
 Go to input devices, unlock channels and mute the front right channel
+To save
+
+$ sudo alfactl store
+
