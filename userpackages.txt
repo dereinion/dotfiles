@@ -9,6 +9,7 @@ cmake
 console-setup
 curl
 dash
+deadbeef
 diffutils
 digikam
 discord
