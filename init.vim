@@ -28,6 +28,7 @@ set wildmode=longest,list
 " Navigate through completion variants using ← and →
 set wildmenu
 ca tn tabnew
+se mouse+=a
 
 call plug#begin(system('echo -n "${XDG_CONFIG_HOME:-$HOME/.config}/nvim/plugged"'))
 Plug 'junegunn/goyo.vim'
