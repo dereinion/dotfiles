@@ -1,6 +1,9 @@
 # Tearing remove
 ## Try this
 ubuntuhandbook.org/index.php/2018/07/fix-screen-tearing-ubuntu-18-04-optimus-laptops/
+
+Choose OpenGL 3.1 as a rendering backend in compositor settings
+
 Open file:
 $ sudo nano /etc/modprobe.d/nvidia-drm-nomodeset.conf
 
@@ -34,7 +37,9 @@ Change it to true by double-clicking.
 Save and restart Firefox.
 
 For nice scroll
+
 Set layers.acceleration.force-enabled true
+
 Set gfx.webrender.all true
 
 # Other useful things
