@@ -15,6 +15,16 @@ autocmd filetype python nnoremap <F4> :w <bar> exec '!python3 '.shellescape('%')
 autocmd filetype c nnoremap <F4> :w <bar> exec '!gcc '.shellescape('%').' -o '.shellescape('%:r').' && ./'.shellescape('%:r')<CR>
 autocmd filetype cpp nnoremap <F4> :w <bar> exec '!g++ '.shellescape('%').' -o '.shellescape('%:r').' && ./'.shellescape('%:r')<CR>
 
+" Autocomplete brackets
+inoremap " ""<left>
+inoremap ' ''<left>
+inoremap ( ()<left>
+inoremap [ []<left>
+inoremap { {}<left>
+inoremap {<CR> {<CR>}<ESC>O
+inoremap {;<CR> {<CR>};<ESC>O
+
+" Defaults
 set nocompatible
 syntax on
 set number
@@ -23,13 +33,12 @@ set ruler
 set hlsearch
 filetype plugin on
 " bash-like TAB completion
-set wildmode=longest,list
+" set wildmode=longest,list
 
 " Navigate through completion variants using ← and →
 set wildmenu
 ca tn tabnew
 se mouse+=a
-
 call plug#begin(system('echo -n "${XDG_CONFIG_HOME:-$HOME/.config}/nvim/plugged"'))
 Plug 'junegunn/goyo.vim'
 Plug 'vim-airline/vim-airline'
@@ -41,8 +50,8 @@ Plug 'itchyny/lightline.vim'
 Plug 'jakobkogler/Algorithm-DataStructures'
 Plug 'flazz/vim-colorschemes'
 Plug 'ap/vim-css-color'
+Plug 'junegunn/fzf'
 
-" Plug 'junegunn/fzf'
 " Plug 'preservim/nerdtree'
 " Plug 'vim-syntastic/syntastic'
 " Plug 'ycm-core/YouCompleteMe'
